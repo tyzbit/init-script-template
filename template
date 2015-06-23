@@ -45,7 +45,7 @@ case "$1" in
     stop)
     if is_running; then
         echo -n "Stopping $name.."
-        start-stop-daemon -K --pid $(get_pid)
+        start-stop-daemon --oknodo -K --pidfile $pid_file
         for i in {1..10}
         do
             if ! is_running; then
