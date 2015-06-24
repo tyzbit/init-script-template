@@ -7,6 +7,8 @@ restart and status commands.
 Handy for [Node.js](http://http://nodejs.org/) apps and everything
 else that runs itself.
 
+NOTE: this will only work on Debian-based distributions like Ubuntu, by design.  The reason for this is the start-stop-daemon handles running processes as another user better than sudo (especially Node.js applications).
+
 Getting started
 ---------------
 
